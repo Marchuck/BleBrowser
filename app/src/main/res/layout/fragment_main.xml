@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.marchuck.blebrowser.main.MainActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/recyclerViewHolder"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/afterConnectLayout">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/afterConnectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/centrie"
+            android:layout_width="0sp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/sendValue_A"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/centrie"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:text="A"
+            android:textColor="@color/colorAccent" />
+
+
+        <Button
+            android:id="@+id/sendValue_B"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/centrie"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:text="B"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/sendAnyValue"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sendValue_A"
+            android:text="SEND"
+            android:textColor="@color/colorAccent" />
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sendValue_A"
+            android:layout_toRightOf="@+id/sendAnyValue"
+            android:background="#dddddd"
+            android:hint="ENTER VALUE"
+            android:padding="@dimen/activity_horizontal_margin"
+            tools:text="dvdsvdsvsdvsdv" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+</RelativeLayout>
